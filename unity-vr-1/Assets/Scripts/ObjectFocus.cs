@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class ObjectFocus : MonoBehaviour
 {
-
+	[Serializable]
+	public class FloatEvent : UnityEvent<float> {}
 	[SerializeField] Transform reference;
 
 	[SerializeField] float minAngle = 10;
 	[SerializeField] float maxAngle = 30;
+
+	[SerializeField] UnityEvent valueChanged;
 
 	private float _fadeAmount = -1;
 	public float fadeAmount
@@ -19,6 +24,7 @@ public class ObjectFocus : MonoBehaviour
 			if (value != _fadeAmount)
 			{
 				_fadeAmount = value;
+				valueChanged.Invoke (_fadeAmount);
 			}
 		}
 	}
@@ -59,10 +65,11 @@ public class ObjectFocus : MonoBehaviour
 		Fade ();
 	}
 
-	
+	#if DEBUG
 	void OnGUI()
 	{
 		GUILayout.Label ("delta : " + delta.ToString());
 		GUILayout.Label ("fadeAmount : " + fadeAmount.ToString());
 	}
+	#endif
 }

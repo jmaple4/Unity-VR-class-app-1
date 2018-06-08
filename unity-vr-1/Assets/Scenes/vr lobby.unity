@@ -120,6 +120,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: valueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4779832299254066, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -214,6 +219,21 @@ Prefab:
       propertyPath: myColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: valueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: valueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: valueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1250480549}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
   m_IsPrefabParent: 0
@@ -392,7 +412,7 @@ Prefab:
     - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
@@ -482,11 +502,16 @@ Prefab:
     - target: {fileID: 114557175194342570, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1250480549 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1200932824707554, guid: 2b6167422e73aa347a4cd5a10ce18286,
+    type: 2}
+  m_PrefabInternal: {fileID: 154399883}
 --- !u!1 &1759493403
 GameObject:
   m_ObjectHideFlags: 0

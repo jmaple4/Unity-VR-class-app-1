@@ -12,7 +12,7 @@ public class MaterGradientModifier : MonoBehaviour
 
 	[SerializeField] Gradient gradient;
 
-	float _gradientPosition;
+	float _gradientPosition = -1;
 	public float gradientPosition 
 	{
 		get { return _gradientPosition ; }
@@ -39,11 +39,11 @@ public class MaterGradientModifier : MonoBehaviour
 	}
 
 	// Use this for initialization
-	void Start()
-	{
-		gradientPosition = 0;
-		// SetGradientPosition(0);
-	}
+	// void Start()
+	// {
+	// 	gradientPosition = 0;
+	//  	SetGradientPosition(0);
+	// }
 	
 	// Update is called once per frame
 	// void Update()
