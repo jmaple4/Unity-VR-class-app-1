@@ -10,7 +10,7 @@ public class ObjectFocus : MonoBehaviour
 	[SerializeField] float minAngle = 10;
 	[SerializeField] float maxAngle = 30;
 
-	private float _fadeAmount;
+	private float _fadeAmount = -1;
 	public float fadeAmount
 	{
 		get { return _fadeAmount; }
@@ -22,7 +22,7 @@ public class ObjectFocus : MonoBehaviour
 			}
 		}
 	}
-	private float _delta;
+	private float _delta = -1;
 	public float delta
 	{
 		get { return _delta; }
@@ -32,6 +32,7 @@ public class ObjectFocus : MonoBehaviour
 			{
 				_delta = value;
 				// TODO: update fade amount
+				fadeAmount = Mathf.InverseLerp (maxAngle, minAngle, _delta);
 			}
 		}
 	}
