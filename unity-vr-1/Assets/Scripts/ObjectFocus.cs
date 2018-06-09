@@ -13,7 +13,7 @@ public class ObjectFocus : MonoBehaviour
 	[SerializeField] float minAngle = 10;
 	[SerializeField] float maxAngle = 30;
 
-	[SerializeField] UnityEvent valueChanged;
+	[SerializeField] FloatEvent valueChanged;
 
 	private float _fadeAmount = -1;
 	public float fadeAmount
@@ -65,11 +65,11 @@ public class ObjectFocus : MonoBehaviour
 		Fade ();
 	}
 
-	#if DEBUG
-	void OnGUI()
-	{
-		GUILayout.Label ("delta : " + delta.ToString());
-		GUILayout.Label ("fadeAmount : " + fadeAmount.ToString());
-	}
-	#endif
+	// #if DEBUG
+	// void OnGUI()
+	// {
+	// 	GUILayout.Label ("delta : " + delta.ToString());
+	// 	GUILayout.Label ("fadeAmount : " + fadeAmount.ToString());
+	// }
+	// #endif
 }

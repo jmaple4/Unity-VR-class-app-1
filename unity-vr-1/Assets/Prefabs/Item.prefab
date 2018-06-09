@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 33470356998298028}
   - component: {fileID: 65439660563957930}
   - component: {fileID: 23362153167562018}
-  - component: {fileID: 114780904083042732}
-  - component: {fileID: 114557175194342570}
+  - component: {fileID: 114446148359567758}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -91,7 +90,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fb1a04d3f7aa3e24b9723819e6fa4436, type: 2}
+  - {fileID: 2100000, guid: 7b07a4d19f8110b4bbdbef6a197a8ac7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,7 +225,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &114557175194342570
+--- !u!114 &114446148359567758
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -234,7 +233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1093117552937200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699551e0a2cc4874e864ecd704a6344b, type: 3}
+  m_Script: {fileID: 11500000, guid: 829f7c28bc3494eacacfb2b0370d0585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reference: {fileID: 0}
@@ -245,7 +244,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114296666475839034}
         m_MethodName: set_gradientPosition
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -254,45 +253,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &114780904083042732
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093117552937200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855cb68b43ed008488e3a791cd3761f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gradient:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
+    m_TypeName: ObjectFocus+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
