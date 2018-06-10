@@ -13,7 +13,9 @@ public class ObjectFocus : MonoBehaviour
 	[SerializeField] float minAngle = 10;
 	[SerializeField] float maxAngle = 30;
 
-	[SerializeField] FloatEvent valueChanged;
+	[SerializeField] AnimationCurve curve;
+	[SerializeField] FloatEvent curveValueChanged;
+	[SerializeField] FloatEvent rawValueChanged;
 
 	private float _fadeAmount = -1;
 	public float fadeAmount
@@ -24,7 +26,8 @@ public class ObjectFocus : MonoBehaviour
 			if (value != _fadeAmount)
 			{
 				_fadeAmount = value;
-				valueChanged.Invoke (_fadeAmount);
+				curveValueChanged.Invoke (curve.Evaluate (_fadeAmount));
+				rawValueChanged.Invoke (_fadeAmount);
 			}
 		}
 	}
