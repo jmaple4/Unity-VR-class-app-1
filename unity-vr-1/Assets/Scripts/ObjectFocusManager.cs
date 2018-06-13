@@ -10,9 +10,9 @@ public class ObjectFocusManager : MonoBehaviour
 	#region Singleton
 
 	private static ObjectFocusManager _instance;
-	public static ObjectFocusManager Instance 
+	public static ObjectFocusManager Instance
 	{
-		get 
+		get
 		{
 			if (_instance == null)
 			{
@@ -20,11 +20,11 @@ public class ObjectFocusManager : MonoBehaviour
 
 				if (_instance == null)
 				{
-					GameObject go = new GameObject ("ObjectFocusManager : Singleton");
-					_instance = go.AddComponent<ObjectFocusManager>();
+					_instance = (new GameObject ("ObjectFocusManager : Singleton")).AddComponent<ObjectFocusManager>();
 
 				}
 			}
+			return _instance;
 		}
 		set 
 		{
@@ -35,6 +35,19 @@ public class ObjectFocusManager : MonoBehaviour
 	#endregion
 
 	#region MonoBehaviour
+	
+	void Awake () 
+	{
+		if (Instance && Instance != this)
+			Destroy (gameObject);
+
+		Instance = this;
+	}
+
+	void OnDisable () 
+	{
+		Instance = null;
+	}
 	void Start () 
 	{
 
