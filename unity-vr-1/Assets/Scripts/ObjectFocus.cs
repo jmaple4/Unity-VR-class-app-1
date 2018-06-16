@@ -40,8 +40,12 @@ public class ObjectFocus : MonoBehaviour
 			if (value != _delta)
 			{
 				_delta = value;
-				// TODO: update fade amount
 				fadeAmount = Mathf.InverseLerp (maxAngle, minAngle, _delta);
+
+				if (_delta <= minAngle)
+					ObjectFocusManager.Add(this);
+				else
+					ObjectFocusManager.Remove(this);
 			}
 		}
 	}
