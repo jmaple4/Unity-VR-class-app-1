@@ -17,6 +17,9 @@ public class ObjectFocus : MonoBehaviour
 	[SerializeField] FloatEvent curveValueChanged;
 	[SerializeField] FloatEvent rawValueChanged;
 
+	[SerializeField] UnityEvent onGotFocus;
+	[SerializeField] UnityEvent onLostFocus;
+
 	private float _fadeAmount = -1;
 	public float fadeAmount
 	{
@@ -49,6 +52,19 @@ public class ObjectFocus : MonoBehaviour
 			}
 		}
 	}
+
+	public void GotFocus () 
+	{
+		Debug.Log (gameObject.name + " got focus");
+		onGotFocus.Invoke();
+	}
+
+	public void LostFocus () 
+	{
+		Debug.Log (gameObject.name + " lost focus");
+		onLostFocus.Invoke();
+	}
+
 	void Fade () {
 		
 		// Debug.DrawLine (reference.position, transform.position, Color.yellow);
