@@ -116,14 +116,14 @@ public class ObjectFocusManager : MonoBehaviour
 		Sort();
 	}
 
-	#if DEBUG
-	void OnGUI ()
-	{
-		GUILayout.Label ("Objects in Focus : " + Count.ToString());
+	// #if DEBUG
+	// void OnGUI ()
+	// {
+	// 	GUILayout.Label ("Objects in Focus : " + Count.ToString());
 
-		if (firstInList)
-			GUILayout.Label ("1st : " + firstInList.name);
-	}
-	#endif
+	// 	if (firstInList)
+	// 		GUILayout.Label ("1st : " + firstInList.name);
+	// }
+	// #endif
 	#endregion
 }
