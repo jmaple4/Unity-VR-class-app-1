@@ -20,6 +20,9 @@ public class ObjectFocus : MonoBehaviour
 	[SerializeField] UnityEvent onGotFocus;
 	[SerializeField] UnityEvent onLostFocus;
 
+	[SerializeField] UnityEvent onActionTrigger;
+
+
 	private float _fadeAmount = -1;
 	public float fadeAmount
 	{
@@ -63,6 +66,11 @@ public class ObjectFocus : MonoBehaviour
 	{
 		Debug.Log (gameObject.name + " lost focus");
 		onLostFocus.Invoke();
+	}
+
+	public void ActionTrigger ()
+	{
+		onActionTrigger.Invoke();
 	}
 
 	void Fade () {

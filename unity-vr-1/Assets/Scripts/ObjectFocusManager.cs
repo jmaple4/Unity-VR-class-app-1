@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class ObjectFocusManager : MonoBehaviour 
 {
+
+	[Serializable]
+	public class BoolEvent : UnityEvent<bool> {}
+
+	[SerializeField] BoolEvent onNewFocusObject;
 
 	List<ObjectFocus> objectsInRange = new List<ObjectFocus>();
 
@@ -72,8 +79,16 @@ public class ObjectFocusManager : MonoBehaviour
 
 				if(_firstInList)
 					_firstInList.GotFocus();
+
+				onNewFocusObject.Invoke (_firstInList != null);
 			}
 		}
+	}
+
+	public void TriggerAction()
+	{
+		if (firstInList)
+			firstInList.ActionTrigger();
 	}
 
 	#endregion

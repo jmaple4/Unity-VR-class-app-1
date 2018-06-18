@@ -31,7 +31,7 @@ public class TouchInputManager : MonoBehaviour
 					onTouch.Invoke();
 					break;
 				case TouchPhase.Ended:
-					onTouchCancel.Invoke();
+					Cancel();
 					break;
 				default:
 					timer += Time.deltaTime;
@@ -41,5 +41,18 @@ public class TouchInputManager : MonoBehaviour
 					break;
 			}
 		}
+	}
+
+	void Cancel () 
+	{
+		timer = 0;
+		onTouchTimerUpdate.Invoke (timerUpdateCurve.Evaluate (Mathf.InverseLerp(0, delay, timer)));
+		onTouchCancel.Invoke();
+	}
+
+	void OnDisable ()
+	{
+		if (Input.touchCount > 0)
+			Cancel();
 	}
 }
