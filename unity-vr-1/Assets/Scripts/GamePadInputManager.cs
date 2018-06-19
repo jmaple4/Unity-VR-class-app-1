@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GamePadInputManager : MonoBehaviour {
 
+	[SerializeField] KeyCode keycode = KeyCode.Joystick1Button14;
+
 	private bool connected = false;
 
 	string[] controllers;
@@ -23,15 +25,27 @@ public class GamePadInputManager : MonoBehaviour {
 		}
 	}
 
-	void Awake () {
+	void Awake () 
+	{
 		StartCoroutine (CheckForControllers ());
 	}
 
-	void Start () {
+	void Start () 
+	{
 
 	}
 
-	void Update () {
+	void Update () 
+	{
+		if (Input.GetKeyDown (keycode))
+		{
+			Debug.Log(keycode.ToString() + "down");
+		}
+		else if (Input.GetKeyUp (keycode))
+		{
+			Debug.Log(keycode.ToString() + "up");
+
+		}
 
 	}
 
