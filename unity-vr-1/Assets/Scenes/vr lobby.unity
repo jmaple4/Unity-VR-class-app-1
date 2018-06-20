@@ -313,25 +313,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  onTouch:
+  onStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: InputBase+BoolEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onPressed:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  onTouchCancel:
+  onReleased:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1378543853}
-        m_MethodName: set_fillAmount
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   timerUpdateCurve:
@@ -358,7 +352,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  onTouchTimerUpdate:
+  onTimerUpdate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1378543853}
@@ -372,9 +366,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: TouchInputManager+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    m_TypeName: InputBase+FloatEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  onTouchTimerEnd:
+  onTimerEnd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1420853686}
@@ -414,6 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200b001d72e0bb3458454d0265ba029e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keycode: 364
 --- !u!1 &1182144173
 GameObject:
   m_ObjectHideFlags: 0
