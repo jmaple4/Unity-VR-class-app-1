@@ -2,9 +2,6 @@
 // using System.Collections.Generic;
 using UnityEngine;
 
-
-
-
 public class TouchInputManager : InputBase 
 {
 	protected override void Update () 

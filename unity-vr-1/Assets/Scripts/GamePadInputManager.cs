@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePadInputManager : MonoBehaviour {
+public class GamePadInputManager : InputBase {
 
 	[SerializeField] KeyCode keycode = KeyCode.Joystick1Button14;
 
@@ -30,24 +30,15 @@ public class GamePadInputManager : MonoBehaviour {
 		StartCoroutine (CheckForControllers ());
 	}
 
-	void Start () 
-	{
 
+	protected override void Update () 
+	{
+		
+		pressed = Input.GetKey (keycode);
+		base.Update();
 	}
 
-	void Update () 
-	{
-		if (Input.GetKeyDown (keycode))
-		{
-			Debug.Log(keycode.ToString() + "down");
-		}
-		else if (Input.GetKeyUp (keycode))
-		{
-			Debug.Log(keycode.ToString() + "up");
 
-		}
-
-	}
 
 	void OnGUI ()
 	{
