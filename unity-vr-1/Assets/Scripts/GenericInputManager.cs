@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePadInputManager : InputBase {
+public class GenericInputManager : InputBase {
 
-	[SerializeField] KeyCode keycode = KeyCode.Joystick1Button14;
+	[SerializeField] string input = "Fire1";
 
 	protected override void Update () 
 	{
 		
-		pressed = Input.GetKey (keycode);
+		pressed = Input.GetButton (input);
 		base.Update();
 	}
 
