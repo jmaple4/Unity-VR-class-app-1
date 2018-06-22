@@ -8,7 +8,6 @@ public class GenericInputManager : InputBase {
 
 	protected override void Update () 
 	{
-		
 		pressed = Input.GetButton (input);
 		base.Update();
 	}
