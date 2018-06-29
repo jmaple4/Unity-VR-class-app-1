@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 
 [ExecuteInEditMode]
 public class Navigator : MonoBehaviour 
@@ -9,6 +11,8 @@ public class Navigator : MonoBehaviour
 	[SerializeField] float wallSearchDistance = 5;
 	[SerializeField] float offWallDistance = .5f;
 	[SerializeField] float groundSearchDistance = 5;
+	[SerializeField] float navMeshSearchDistance = .5f;
+
 
 
 	[SerializeField] LayerMask cullingMask = -5;
@@ -23,6 +27,9 @@ public class Navigator : MonoBehaviour
 	bool _groundHit;
 	RaycastHit _groundHitInfo;
 	Vector3 _groundHitPosition;
+
+	bool _navMeshHit;
+	NavMeshHit _navMeshHitInfo;
 
 	Vector3 _targetLocation;
 
@@ -68,6 +75,11 @@ public class Navigator : MonoBehaviour
 		if (_groundHit)
 		{
 			_groundHitPosition = _groundHitInfo.point;
+			hasTargetLocation = _navMeshHit = NavMesh.SamplePosition(_groundHitPosition, out _navMeshHitInfo, navMeshSearchDistance, NavMesh.AllAreas);
+			if (_navMeshHit)
+			{
+				_targetLocation = _navMeshHitInfo.position;
+			}
 		}
 		else 
 		{
@@ -81,8 +93,20 @@ public class Navigator : MonoBehaviour
 			Debug.DrawLine(_wallHitPosition, _wallBouncePosition, Color.blue);
 			if (_groundHit)
 				Debug.DrawLine(_wallBouncePosition, _groundHitPosition, Color.cyan);
+			if (_navMeshHit)
+				Debug.DrawLine(_groundHitPosition, _navMeshHitInfo.position, Color.white);
 			// Debug.DrawRay(transform.position, transform.forward * wallSearchDistance, Color.yellow);
 		}
 		#endif
 	}
+
+	void OnDrawGizmosSelected ()
+	{
+		if (!_groundHit && !drawLines)
+			return;
+
+			Gizmos.color = Color.white;
+			Gizmos.DrawWireSphere(_groundHitPosition, navMeshSearchDistance);
+	}
+
 }
