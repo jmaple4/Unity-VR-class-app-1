@@ -13,11 +13,15 @@ public class Navigator : MonoBehaviour
 	[SerializeField] float groundSearchDistance = 5;
 	[SerializeField] float navMeshSearchDistance = .5f;
 
-
-
 	[SerializeField] LayerMask cullingMask = -5;
 	[SerializeField] QueryTriggerInteraction queryTriggerInteraction = QueryTriggerInteraction.Ignore;
 
+	[Header ("Reticle")]
+	[SerializeField] GameObject reticle;
+
+	[Header ("Debug")]
+	[SerializeField] bool drawLines = true;
+	
 	bool _wallHit;
 	RaycastHit _wallHitInfo;
 	Vector3 _wallHitPosition;
@@ -42,12 +46,13 @@ public class Navigator : MonoBehaviour
 			if (value != _hasTargetLocation)
 			{
 				_hasTargetLocation = value;
+
+				if (reticle)
+					reticle.SetActive(_hasTargetLocation);
 			}
 		}
 	}
 
-	[Header ("Debug")]
-	[SerializeField] bool drawLines = true;
 
 	void Start () 
 	{
@@ -79,6 +84,9 @@ public class Navigator : MonoBehaviour
 			if (_navMeshHit)
 			{
 				_targetLocation = _navMeshHitInfo.position;
+
+				if (reticle)
+					reticle.transform.SetPositionAndRotation(_targetLocation, Quaternion.identity);
 			}
 		}
 		else 
