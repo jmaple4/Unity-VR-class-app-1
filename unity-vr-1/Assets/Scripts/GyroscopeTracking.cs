@@ -10,8 +10,15 @@ public class GyroscopeTracking : MonoBehaviour {
 	{
 		if (!enabled)
 			return;
-		transform.parent = new GameObject("Gyro Root").transform;
-		transform.parent.rotation = Quaternion.Euler (0, 0, 60);
+
+		Vector3 position = transform.position;
+		Transform p = new GameObject("Gyro Root").transform;
+		p.position = position;
+		p.SetParent(transform.parent, true);
+		transform.SetParent (p);
+
+		// transform.parent = new GameObject("Gyro Root").transform;
+		transform.parent.rotation = Quaternion.Euler (90, -90, 0);
 		transform.rotation = Quaternion.identity;
 	}
 
