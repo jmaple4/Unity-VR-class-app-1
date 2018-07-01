@@ -19,6 +19,10 @@ public class Navigator : MonoBehaviour
 	[Header ("Reticle")]
 	[SerializeField] GameObject reticle;
 
+	[Header ("Agent")]
+	[SerializeField] NavMeshAgent agent;
+
+
 	[Header ("Debug")]
 	[SerializeField] bool drawLines = true;
 	
@@ -51,6 +55,13 @@ public class Navigator : MonoBehaviour
 					reticle.SetActive(_hasTargetLocation);
 			}
 		}
+	}
+
+	[ContextMenu ("Set Agent Destination")]
+	public void SetAgentDestination () 
+	{
+		if (agent && hasTargetLocation)
+			agent.SetDestination(_targetLocation);
 	}
 
 
