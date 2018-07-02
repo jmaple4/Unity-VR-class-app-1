@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.unity.probuilder": "3.0.9",
-    "com.unity.xiaomi": "1.0.2"
+    "com.unity.probuilder": "3.0.9"
   }
 }
