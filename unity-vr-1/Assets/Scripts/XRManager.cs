@@ -10,8 +10,13 @@ public class XRManager : MonoBehaviour {
 
 	static XRManager _instance;
 
+	[SerializeField] bool disablePositionalTrackingOnAwake = true;
+
 	void Awake () 
 	{
+		if (disablePositionalTrackingOnAwake)
+            InputTracking.disablePositionalTracking = true;
+		
 		if (!_instance)
 			_instance = this;
 		else
