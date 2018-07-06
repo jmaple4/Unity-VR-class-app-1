@@ -1303,41 +1303,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 790e191d50e6fe249900e78369ae7986, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &272710543 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
-  m_PrefabInternal: {fileID: 1383030314}
---- !u!65 &272710544
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 272710543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.17, y: 4.000002, z: 5.39}
-  m_Center: {x: 0.00000035762787, y: 2, z: 0.0000025480986}
---- !u!114 &272710545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 272710543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8064fc19b7a32ac409a661cacecca34a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filterTag: Player
-  animator: {fileID: 272710547}
-  animatorBoolName: character_nearby
---- !u!95 &272710547 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9575016, guid: ac7a01ca06ca9044eb15b32cb7a936f8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1383030314}
 --- !u!1001 &274415725
 Prefab:
   m_ObjectHideFlags: 0
@@ -3521,7 +3486,7 @@ GameObject:
   - component: {fileID: 640535339}
   m_Layer: 0
   m_Name: Agent
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12209,25 +12174,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 125
       objectReference: {fileID: 0}
-    - target: {fileID: 11444398, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1319154464}
-    - target: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
       propertyPath: m_Name
       value: glass_panel_1_with_door (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 127260, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 141970, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac7a01ca06ca9044eb15b32cb7a936f8, type: 2}
