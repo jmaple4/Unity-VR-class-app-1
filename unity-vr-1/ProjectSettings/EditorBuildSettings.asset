@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/vr lobby.unity
     guid: e47e5f7d161dfae44b9f1ba9a10fe691
   - enabled: 0
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VR Navigation.unity
     guid: 9812c5547d69a3445b70e3f9faa7bdc7
+  - enabled: 1
+    path: Assets/Scenes/VR Video Gallery.unity
+    guid: e585d4ff6e924104cb87da1c67d596a4
   m_configObjects: {}

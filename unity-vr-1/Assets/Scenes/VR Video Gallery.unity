@@ -489,12 +489,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 20
+    m_Right: 20
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 4
-  m_Spacing: 10
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -769,6 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519240993}
   - component: {fileID: 1519240992}
+  - component: {fileID: 1519240994}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -807,7 +808,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!4 &1519240993
 Transform:
@@ -822,6 +823,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519240994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519240991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f2f9a4135ea3b40ae1a87b0eb4194b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationType: 2
+  clips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  clipButton: {fileID: 730917292}
 --- !u!1 &1567392376
 GameObject:
   m_ObjectHideFlags: 0

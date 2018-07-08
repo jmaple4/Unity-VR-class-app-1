@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16590783, g: 0.2891255, b: 0.5238845, a: 1}
+  m_IndirectSpecularColor: {r: 0.16593039, g: 0.28913128, b: 0.52392197, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c682e58e08e44ebbf23eb381d84a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disablePositionalTrackingOnAwake: 1
 --- !u!4 &356623294
 Transform:
   m_ObjectHideFlags: 0
@@ -289,7 +290,7 @@ Prefab:
     - target: {fileID: 102544018162103884, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: m_Text
-      value: "VR \nVideo Player\n"
+      value: "VR \nVideo Player"
       objectReference: {fileID: 0}
     - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
@@ -319,7 +320,7 @@ Prefab:
     - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
@@ -989,7 +990,9 @@ Prefab:
     - target: {fileID: 102544018162103884, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: m_Text
-      value: "VR \nShooter"
+      value: 'nothing
+
+        happens'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
@@ -1102,6 +1105,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4779832299254066, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -1146,7 +1154,37 @@ Prefab:
     - target: {fileID: 102544018162103884, guid: 2b6167422e73aa347a4cd5a10ce18286,
         type: 2}
       propertyPath: m_Text
-      value: "VR \nMaze\n"
+      value: "VR \nMaze"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1572094662}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114446148359567758, guid: 2b6167422e73aa347a4cd5a10ce18286,
+        type: 2}
+      propertyPath: onActionTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6167422e73aa347a4cd5a10ce18286, type: 2}
