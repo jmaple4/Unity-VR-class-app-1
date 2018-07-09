@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f2f9a4135ea3b40ae1a87b0eb4194b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationType: 2
+  locationType: 1
   clips:
   - {fileID: 0}
   - {fileID: 0}
